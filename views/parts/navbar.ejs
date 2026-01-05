@@ -1,0 +1,17 @@
+<header class="navbar">
+    <div class="logo">Wanderlust</div>
+    <form class="d-flex center" role="search" action="/listing/search" method="GET">
+      <input class="form-control me-2 change" type="search" placeholder="Search Destination" aria-label="Search"  name="q"/>
+      <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass icon"></i>Search</button>
+    </form>
+    <nav>
+      <% if(!currUser) { %>
+        <a href="/signup"><b>Sign Up</b></a> 
+        <a href="/login"><b>Login</b></a>  
+      <% } %>
+      <% if(currUser) { %>
+        <a href="/logout">Logout</a>
+      <% } %>
+      <a href="/listing/new">+ WanderLust your home</a>
+    </nav>
+</header>

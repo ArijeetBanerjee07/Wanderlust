@@ -1,0 +1,37 @@
+<%-include('navbar.ejs') %>
+  <div class="container">
+    <% if(msgS && msgS.length > 0) { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= msgS %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+    <% if(msgE && msgE.length > 0) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= msgE %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+    <% if (currUser) { %>
+      <div class="mb-3 text-muted">
+        Logged in as <strong><%= currUser.username %></strong>
+      </div>
+    <% } %>
+
+    <h2>Available Listings</h2>
+    <div class="listings-grid">
+      <% allListings.forEach(list => { %>
+        <div class="card">
+          <img 
+          src="<%= list.image.url %>" 
+          alt="<%= list.title %>">
+          <div class="card-body">
+            <a href="/listing/show/<%= list.id %>" class="show"><h3><b><%= list.title %></b></h3></a>
+            <p class="location"><%= list.location %>, <%= list.country %></p>
+            <p class="desc"><%= list.description %></p>
+            <p class="price">₹<%= list.price.toLocaleString("en-IN") %> / night</p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>

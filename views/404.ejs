@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>404 | Page Not Found – Wanderlust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #F9FAFB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .error-container {
+      background: #FFFFFF;
+      padding: 50px 40px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 480px;
+      width: 90%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .error-code {
+      font-size: 96px;
+      font-weight: 700;
+      color: #FF385C;
+      line-height: 1;
+    }
+
+    .error-title {
+      font-size: 26px;
+      font-weight: 600;
+      color: #222222;
+      margin-top: 10px;
+    }
+
+    .error-text {
+      font-size: 15px;
+      color: #6B7280;
+      margin: 15px 0 30px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #FF385C;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #e03150;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid #FF385C;
+      color: #FF385C;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #FF385C;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      font-size: 42px;
+      color: #E5E7EB;
+      margin-bottom: 15px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="error-container">
+    <div class="icon">🧭</div>
+    <div class="error-code">404</div>
+    <div class="error-title">Oops! You’re off the map</div>
+    <div class="error-text">
+      The page you’re looking for doesn’t exist.<br>
+      But don’t worry — amazing stays are still waiting.
+    </div>
+
+    <div class="buttons">
+      <a href="/" class="btn btn-primary">Go Home</a>
+      <a href="/listing" class="btn btn-outline">View Listings</a>
+    </div>
+  </div>
+
+</body>
+</html>
